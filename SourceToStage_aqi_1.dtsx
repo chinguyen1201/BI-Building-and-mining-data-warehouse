@@ -1,0 +1,2713 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/19/2024 1:38:04 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-CL7N23GM"
+  DTS:CreatorName="LAPTOP-CL7N23GM\Chi Nguyen"
+  DTS:DTSID="{2F19A84F-7DC2-4381-B33F-7C65B3D57B7B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="SourceToStage_aqi_1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{BDBC665C-2B24-41F6-89C1-825735E735B9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[aqi_2021]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3E52D59C-30EE-48E3-B11E-5DC4677BEA09}"
+      DTS:ObjectName="aqi_2021">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\BI\Dataset\10_state_aqi_2021.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{72D5CA70-B10D-44E4-B94D-AA435B7453CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{4DEFE2E6-83E0-4F32-A723-D00721C445AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{66196B1A-09C2-4661-9DC2-D49A1F0F74C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{7E779F8B-BABD-465B-8EB9-A7896421DE83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{5CC72C1C-4900-4A66-93BB-CBFC94E10EF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{BA41D70F-F088-4BF4-91F3-0C65238A327D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{0CFF88C5-3CB9-428B-92CF-89E7C7F73B92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{0C4A5224-00A1-4142-96B1-A519BA1C174C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{C3D12C6A-DFD5-44D9-9886-93630D77098F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{08CA697C-7FD0-43E6-8730-EFF9398848D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{EF56F6C1-A534-4052-B398-D814B1B5AD97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{D594308E-4743-4CF7-86AB-C135AC30B433}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[aqi_2022]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{83240E07-66AA-4C68-A282-3E085997B35E}"
+      DTS:ObjectName="aqi_2022">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\BI\Dataset\10_state_aqi_2022.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{ECC6FCB0-FC8A-46D8-A46C-EECF5E856B56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{02338505-ED69-4202-AD27-7C1729DBCFCA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{65214CC0-5DD8-4298-8680-FE29F8441E22}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{8BED94E6-FA96-4825-B3F5-C53C065EED98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{34E673C4-39F0-4A56-A1F1-6C3F39C06B97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{E5E345EE-C49E-40A0-8692-EBD4E64B8111}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{6B11D86A-8606-4F72-B065-3E95E21B1A1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{3E077802-51B6-408D-8686-7132E1621111}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{36FB3231-F0DE-4EB8-A955-C73607F2CFEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{D234E4AC-9E09-45F9-ADDC-6B9E298C9E4A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{B2FCD959-81C6-44B3-A553-4FB8E78C88C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{57893519-4984-41A1-AB87-87D175C4D0CC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[aqi_2023]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BC032FD1-E860-41CE-B618-9515C287783C}"
+      DTS:ObjectName="aqi_2023">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\BI\Dataset\10_state_aqi_2023.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{9609AE66-169A-441E-A3CD-4D1DA61DD621}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{8B1AF832-8114-462D-86BC-71601ACE2733}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{F309B308-4C9C-493F-B950-8352BD6168D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{84B0C5DE-6C0A-4A9E-A77A-41F5DE031149}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{D55362A4-99F4-471C-89B5-1693D5E69191}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{C36684F7-BBE6-4440-ADF8-94060060F8A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{1AA47631-A086-47CC-B324-3F62695193A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{6505ACB0-ACE3-47E2-BA3E-A1E2644F3385}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{36623A60-9EEA-4E82-81FD-E70B06DF1F65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{D2698C82-9382-4FAE-882A-56A5060549AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{71B838BE-F57A-4E31-8554-A3F4770169F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{CFF01AFE-4CF7-4F2A-9B18-6F6A3CC429F2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Metadata]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{148A509D-B27A-41EC-9C6A-1C73AC9C5F97}"
+      DTS:ObjectName="LAPTOP-CL7N23GM\SQLEXPRESS.Metadata">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-CL7N23GM\SQLEXPRESS;Initial Catalog=Metadata;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{148A509D-B27A-41EC-9C6A-1C73AC9C5F97}LAPTOP-CL7N23GM\SQLEXPRESS.Metadata;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8CE17EFD-6824-4C3B-96B5-7F4C6EA5452A}"
+      DTS:ObjectName="LAPTOP-CL7N23GM\SQLEXPRESS.Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-CL7N23GM\SQLEXPRESS;Initial Catalog=Stage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{8CE17EFD-6824-4C3B-96B5-7F4C6EA5452A}LAPTOP-CL7N23GM\SQLEXPRESS.Stage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8F374F73-8CA7-4261-8BE6-FBB839AAACB9}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETResult">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A8B8CD20-20C6-4416-AFA6-E6199A663AEA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETResult">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Import data from Source to Stage - AQI"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6DFFB1CA-F8B5-4105-AE87-0AD567E4804D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import data from Source to Stage - AQI"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="aqi_2021_Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[aqi_2021]"
+                  connectionManagerRefId="Package.ConnectionManagers[aqi_2021]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="aqi_2021_Stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[aqi_2021_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[State Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[county Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[County Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="aqi_2022_Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[aqi_2022]"
+                  connectionManagerRefId="Package.ConnectionManagers[aqi_2022]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="aqi_2022_Stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[aqi_2022_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[State Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[county Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[County Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="aqi_2023_Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[aqi_2023]"
+                  connectionManagerRefId="Package.ConnectionManagers[aqi_2023]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="aqi_2023_Stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[aqi_2023_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[State Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[county Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[County Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import data from Source to Stage - AQI.Paths[Flat File Source Output]"
+              endId="Package\Import data from Source to Stage - AQI\aqi_2021_Stage.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import data from Source to Stage - AQI\aqi_2021_Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Import data from Source to Stage - AQI.Paths[Flat File Source Output1]"
+              endId="Package\Import data from Source to Stage - AQI\aqi_2022_Stage.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import data from Source to Stage - AQI\aqi_2022_Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Import data from Source to Stage - AQI.Paths[Flat File Source Output2]"
+              endId="Package\Import data from Source to Stage - AQI\aqi_2023_Stage.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import data from Source to Stage - AQI\aqi_2023_Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate table AQI"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AF812115-E4B4-4DF4-9F71-A5947EB26DE0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate table AQI"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8CE17EFD-6824-4C3B-96B5-7F4C6EA5452A}"
+          SQLTask:SqlStatementSource="truncate table [aqi_2021_Stage];&#xA;&#xA;truncate table [aqi_2022_Stage];&#xA;&#xA;truncate table [aqi_2023_Stage];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{351CF3CB-3662-4B3C-85D4-B2ADCE03BD77}"
+      DTS:From="Package\truncate table AQI"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import data from Source to Stage - AQI" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="264,42.6666666666667"
+          Id="Package\Import data from Source to Stage - AQI"
+          TopLeft="128.124994272367,177.210524370053" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\truncate table AQI"
+          TopLeft="170.624992372468,75.9473675871656" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="256.708326655751,118.614034253832">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.5964901162205"
+              Start="0,0"
+              End="0,51.0964901162205">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.0964901162205" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import data from Source to Stage - AQI">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Import data from Source to Stage - AQI\aqi_2022_Source"
+          TopLeft="415.749989937991,106.421049279685" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Import data from Source to Stage - AQI\aqi_2023_Source"
+          TopLeft="634.999984577298,105.052628242078" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Import data from Source to Stage - AQI\aqi_2021_Stage"
+          TopLeft="204.374990863726,203.210524084578" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Import data from Source to Stage - AQI\aqi_2022_Stage"
+          TopLeft="422.249989781529,200.789467300983" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Import data from Source to Stage - AQI\aqi_2021_Source"
+          TopLeft="199.999991059304,108.10526197092" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Import data from Source to Stage - AQI\aqi_2023_Stage"
+          TopLeft="636.124984497205,191.789467569203" />
+        <EdgeLayout
+          Id="Package\Import data from Source to Stage - AQI.Paths[Flat File Source Output2]"
+          TopLeft="715.562484537252,147.719294908745">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.0701726604579"
+              Start="0,0"
+              End="0,36.5701726604579">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5701726604579" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import data from Source to Stage - AQI.Paths[Flat File Source Output1]"
+          TopLeft="498.99998985976,149.087715946352">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.7017513546313"
+              Start="0,0"
+              End="0,44.2017513546313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2017513546313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import data from Source to Stage - AQI.Paths[Flat File Source Output]"
+          TopLeft="282.187490961515,150.771928637587">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.4385954469911"
+              Start="0,0"
+              End="0,44.9385954469911">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.9385954469911" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import data from Source to Stage - AQI\aqi_2021_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import data from Source to Stage - AQI\aqi_2022_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import data from Source to Stage - AQI\aqi_2023_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

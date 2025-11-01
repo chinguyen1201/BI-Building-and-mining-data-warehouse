@@ -1,0 +1,831 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/19/2024 1:32:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-CL7N23GM"
+  DTS:CreatorName="LAPTOP-CL7N23GM\Chi Nguyen"
+  DTS:DTSID="{04A664AC-80CE-4C49-A617-6304C3B25152}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="SourceToStage"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{F6DDF6AB-70F8-4123-B83A-AB69FDBD0281}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6B63FFC0-E918-4BD2-8D15-7CD6AE07DBDB}"
+      DTS:ObjectName="LAPTOP-CL7N23GM\SQLEXPRESS.Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-CL7N23GM\SQLEXPRESS;Initial Catalog=Stage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-SourceToStage-{6B63FFC0-E918-4BD2-8D15-7CD6AE07DBDB}LAPTOP-CL7N23GM\SQLEXPRESS.Stage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[uscounties]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2D5A2340-D2F2-4017-9C80-DC695D415F60}"
+      DTS:ObjectName="uscounties">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\BI\Dataset\(2B)uscounties.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{2C97F687-BCA9-4235-8BF0-6DEF192FFB01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_ascii"
+              DTS:DTSID="{062317AC-9E70-4A56-B426-A44774B3E0B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_full"
+              DTS:DTSID="{D08CF12F-6726-476E-87A0-4EC00CBF97FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county_fips"
+              DTS:DTSID="{DB0EE5E6-6DFB-4E85-9C79-099B8F174AF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_id"
+              DTS:DTSID="{9B0C6F78-0F23-40B1-B4FF-E65EF7D83BAF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_name"
+              DTS:DTSID="{90276181-3D16-416E-96C1-497CF0D15009}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lat"
+              DTS:DTSID="{246D1F7E-86CC-4C7D-B83B-162738A1DB02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lng"
+              DTS:DTSID="{3CE07F7B-7E94-4AEA-895C-DE4487AE28BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="population"
+              DTS:DTSID="{655C045E-B2D7-48E0-B05E-681792384F46}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Import data from Source to Stage - uscounties"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3EEC91B9-8589-4465-919A-2F6A1A982BBF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import data from Source to Stage - uscounties"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import data from Source to Stage - uscounties\uscounties_Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="uscounties_Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[uscounties]"
+                  connectionManagerRefId="Package.ConnectionManagers[uscounties]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county]"
+                      name="county"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county_ascii]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_ascii]"
+                      name="county_ascii"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county_full]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_full]"
+                      name="county_full"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county_fips]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_fips]"
+                      name="county_fips"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[state_id]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[state_id]"
+                      name="state_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[state_name]"
+                      name="state_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[lat]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[lat]"
+                      name="lat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[lng]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[lng]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[lng]"
+                      name="lng"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[population]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[population]"
+                      length="50"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[population]"
+                      name="population"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_ascii" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_full" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_fips" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lat" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[lng]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lng" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].ExternalColumns[population]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="population" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="uscounties_Stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[USCounties_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-CL7N23GM\SQLEXPRESS.Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[county_ascii]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_ascii"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_ascii]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[county_full]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_full"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_full]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[county_fips]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county_fips"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[county_fips]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[state_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_id"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[state_id]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[state_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state_name"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[state_name]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[lat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lat"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[lat]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[lng]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lng"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[lng]" />
+                    <inputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].Columns[population]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="population"
+                      externalMetadataColumnId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output].Columns[population]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_ascii" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_full" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county_fips" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state_name" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lat" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="lng" />
+                    <externalMetadataColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="population" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import data from Source to Stage - uscounties.Paths[Flat File Source Output]"
+              endId="Package\Import data from Source to Stage - uscounties\uscounties_Stage.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import data from Source to Stage - uscounties\uscounties_Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate table uscounties_Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F66293BA-8ABC-4609-A66D-A0D200A1FDA5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate table uscounties_Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6B63FFC0-E918-4BD2-8D15-7CD6AE07DBDB}"
+          SQLTask:SqlStatementSource="truncate table [USCounties_Stage];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{96FA2095-1F32-4513-B945-80A15EBB5D7D}"
+      DTS:From="Package\truncate table uscounties_Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import data from Source to Stage - uscounties" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="297.333333333334,42.6666666666667"
+          Id="Package\Import data from Source to Stage - uscounties"
+          TopLeft="136.249993909151,160.789471918774" />
+        <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\truncate table uscounties_Stage"
+          TopLeft="174.999992176891,74.5789465495589" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="287.958326376354,117.245613216226">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.5438587025485"
+              Start="0,0"
+              End="0,36.0438587025485">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.0438587025485" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import data from Source to Stage - uscounties">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Import data from Source to Stage - uscounties\uscounties_Stage"
+          TopLeft="217.499990276993,196.368418896545" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Import data from Source to Stage - uscounties\uscounties_Source"
+          TopLeft="212.49999050051,109.473683008527" />
+        <EdgeLayout
+          Id="Package\Import data from Source to Stage - uscounties.Paths[Flat File Source Output]"
+          TopLeft="298.666657055418,152.140349675193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.2280692213517"
+              Start="0,0"
+              End="0,36.7280692213517">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.7280692213517" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import data from Source to Stage - uscounties\uscounties_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
