@@ -1,0 +1,127 @@
+//1. Report the min and max of AQI value for each State during each quarter of years.
+SELECT  
+  {[Measures].[Minimum AQI], [Measures].[Maximum AQI]} ON COLUMNS,
+  NONEMPTY (
+      [Dim Site].[State Name].[State Name] *
+      [Dim Date].[Year].[Year] *
+      [Dim Date].[Quarter].[Quarter]
+	) ON ROWS
+FROM [OLAP];
+
+//2. Report the mean and the standard deviation of AQI value for each 
+//State during each quarter of years.
+WITH 
+MEMBER [Measures].[Std] AS 
+    Stdev   
+   ([Dim Date].[Hierarchy Date].CurrentMember.Children,
+    [Measures].[Mean])  
+-- Query Results
+SELECT 
+    {[Measures].[Mean], [Measures].[Std]} ON COLUMNS,
+    NON EMPTY 
+	[Dim Site].[State Name].[State Name] *
+    FILTER(
+      [Dim Date].[Year].MEMBERS, 
+      [Dim Date].[Year].CurrentMember.Name <> "All" 
+	  AND [Dim Date].[Year].CurrentMember.Name <> "Unknown"
+    ) *
+      [Dim Date].[Hierarchy Date].[Quarter].MEMBERS
+  ON ROWS
+FROM [OLAP];
+
+//3. Report the number of days, and the mean AQI value 
+//where the air quality is rated as "very unhealthy" or worse for each State and County.
+SELECT 
+    {[Measures].[Fact AQI Count], [Measures].[Mean]} ON COLUMNS,
+    NONEMPTYCROSSJOIN (
+      [Dim Site].[State Name].[State Name],
+      [Dim Site].[County Name].[County Name]
+    ) ON ROWS
+FROM [OLAP]
+WHERE {[Dim Category].[SK Category].&[2], [Dim Category].[SK Category].&[6]};
+
+//4. For the four following states: Hawaii, Alaska, Illinois, and Delaware, 
+//count the number of days in each air quality Category (Good, Moderate, etc.) by County.
+WITH 
+MEMBER [Measures].[NumOfDays4States] AS 
+   COUNT(FILTER(
+            [Dim Date].[Day].MEMBERS,
+            [Measures].[AQI] > 0))
+SELECT 
+    {[Dim Category].[Category Name].[Category Name] * [Measures].[NumOfDays4States]} 
+	ON COLUMNS,
+    NONEMPTYCROSSJOIN(
+        {[Dim Site].[State Name].&[Hawaii], 
+         [Dim Site].[State Name].&[Alaska], 
+         [Dim Site].[State Name].&[Illinois], 
+         [Dim Site].[State Name].&[Delaware]}, 
+         [Dim Site].[County Name].[County Name]
+    ) ON ROWS
+FROM [OLAP];
+
+//5. For the four following states: Hawaii, Alaska, Illinois, and Delaware, 
+// compute the mean AQI value by quarters.
+SELECT 
+    NON EMPTY([Dim Date].[Year].[Year] * [Dim Date].[Quarter].[Quarter]) ON COLUMNS,
+    NON EMPTY(
+        {[Dim Site].[State Name].&[Hawaii], 
+         [Dim Site].[State Name].&[Alaska], 
+         [Dim Site].[State Name].&[Illinois], 
+         [Dim Site].[State Name].&[Delaware]}
+    ) ON ROWS
+FROM [OLAP]
+WHERE [Measures].[Mean];
+
+//9. Report the mean, the standard deviation, min and max of AQI value group by
+//State and County during each quarter of the year. 
+WITH 
+MEMBER [Measures].[Std] AS 
+    Stdev   
+   ([Dim Date].[Hierarchy Date].CurrentMember.Children,
+    [Measures].[Mean])  
+
+SELECT {[Measures].[Minimum AQI], [Measures].[Maximum AQI], [Measures].[Mean], [Measures].[Std]} ON COLUMNS,
+	NON EMPTY
+	 [Dim Site].[State Name].[State Name] 
+	 * [Dim Site].[County Name].[County Name]
+	 * [Dim Date].[Year].[Year]
+	 * [Dim Date].[Quarter].[Quarter]
+	ON ROWS
+FROM [OLAP];
+
+//10. Create a new attribute, DayLightSaving, in a suitable table. DayLightSaving may
+//have two values:
+//True: Between March 12, 2023, and November 5, 2023
+//False: Otherwise
+//Report the mean AQI value by State, Category, DayLightSaving over years.
+
+SELECT
+    NON EMPTY
+		[Dim Site].[State Name].[State Name] *
+		[Dim Date].[Year].[Year] *
+		[Dim Date].[Day Light Saving].[Day Light Saving] ON ROWS,
+    NON EMPTY
+        [Dim Category].[Category Name].[Category Name] ON COLUMNS
+FROM [OLAP]
+WHERE [Measures].[Mean];
+
+
+//11. Count the number of days by State, Category in each month.
+//Be caution: The Category in the data set is calculated for each County, not State.
+SELECT
+	NON EMPTY
+		[Dim Site].[State Name].[State Name] *
+		[Dim Date].[Year].[Year] *
+		[Dim Date].[Month].[Month] ON ROWS,
+	NON EMPTY
+		[Dim Category].[Category Name].[Category Name] ON COLUMNS
+FROM [OLAP]
+WHERE [Measures].[Date Distinct Count];
+
+//12. Report the number of days by Category and Defining Parameter. 
+SELECT
+	NON EMPTY [Dim Category].[Category Name].[Category Name] ON ROWS,
+	NON EMPTY
+		[Dim Param].[Param Name].[Param Name] ON COLUMNS
+FROM [OLAP]
+WHERE [Measures].[Fact AQI Count];
