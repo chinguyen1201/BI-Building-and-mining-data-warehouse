@@ -14,3 +14,7 @@ The project for the course **Information Systems for Business Intelligence - CSC
 - 21127235_Nguyễn Xuân Quỳnh Chi  
 - 21127495_Lê Ngô Song Cát  
 - 21127659_Bùi Ngọc Kiều Nhi  
+
+### Important notes 
+- The file *Report/09_Report.pdf* is corrupted. Please refer to the original file outside the folder.
+- The files 
