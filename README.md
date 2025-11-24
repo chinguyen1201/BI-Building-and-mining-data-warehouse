@@ -16,5 +16,8 @@ The project for the course **Information Systems for Business Intelligence - CSC
 - 21127659_Bùi Ngọc Kiều Nhi  
 
 ### Important notes 
-- The file *Report/09_Report.pdf* is corrupted. Please refer to the original file outside the folder.
-- The files 
+These files below are all corrupted. Please refer to the original files outside the folders.
+- Report/09_Report.pdf
+- Dataset/10_state_aqi_2021.csv
+- Dataset/10_state_aqi_2022.csv
+- Dataset/10_state_aqi_2023.csv
